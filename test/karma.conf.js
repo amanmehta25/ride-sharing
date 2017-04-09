@@ -32,7 +32,6 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-messages/angular-messages.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-      'bower_components/jquery-shadow-animation/jquery.animate-shadow.js',
       'bower_components/angular-toastr/dist/angular-toastr.tpls.js',
       'bower_components/angular-aria/angular-aria.js',
       'bower_components/angular-material/angular-material.js',

@@ -61,11 +61,11 @@
 .available-riders__name {
     font-size: $base-large-font;
     font-weight: $base-font-weight;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 .available-riders__ratings {
-    color: #0000ff;
+    color: #00f;
     float: right;
 }
 
@@ -120,16 +120,16 @@
 .selected-rider__name {
     font-size: $base-font;
     font-weight: $base-font-weight;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 .selected-rider__ratings {
-    color: #0000ff;
+    color: #00f;
     float: right;
 }
 
 .selected-rider__contact {
-    color: #0000ff;
+    color: #00f;
 }
 
 .selected-rider__model {
@@ -148,7 +148,7 @@
 }
 
 .commuters-details__phone {
-    color: #0000ff;
+    color: #00f;
 }
 
 @media only screen and (max-width: 768px) {
@@ -159,5 +159,9 @@
 
     .available-riders {
         width: 100%;
+    }
+
+    .ride-details {
+        font-size: $base-medium-font;
     }
 }

@@ -9,7 +9,7 @@
  */
 angular
     .module('rideSharing')
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
         $stateProvider
             .state('auth', {
@@ -43,4 +43,5 @@ angular
             });
 
         $urlRouterProvider.otherwise('/auth/sign-up');
+        $locationProvider.hashPrefix('');
     });
