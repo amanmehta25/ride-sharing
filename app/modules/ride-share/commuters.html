@@ -1,0 +1,63 @@
+<div class="pick-ride-container text-center">
+    <div ng-if="!Commuters.isRiderConfirmed">
+        <div class="pick-ride">
+            pick a ride
+            <span class="log-out pull-right" ng-click="RideShare.logOut()">Logout</span>
+        </div>
+        <form class="pick-ride-form" ng-submit="Commuters.searchLocation()">
+            <md-input-container class="pick-ride-form__input pull-left">
+                <label>Start From</label>
+                <input type="text" name="source" ng-model="Commuters.route.source" placeholder="enter start location" required>
+            </md-input-container>
+            <md-input-container class="pick-ride-form__input pull-right">
+                <label>Destination</label>
+                <input type="text" name="destination" ng-model="Commuters.route.destination" placeholder="enter destination" required>
+            </md-input-container>
+            <div class="position">
+                <button class="button button--primary" type="submit">Search</button>
+            </div>
+        </form>
+        <div class="available-riders-container" ng-if="Commuters.availableRiders.length > 0">
+            <div class="available-riders" ng-class="{'available-riders--selected': rider.isSelected}" ng-repeat="rider in Commuters.availableRiders" ng-click="Commuters.selectRider(rider)">
+                <div>
+                    <span class="available-riders__name">{{rider.name}}</span>
+                    <span class="available-riders__ratings">{{rider.ratings}}</span>
+                </div>
+                <div>
+                    route: <span class="available-riders__route">{{rider.route.source}} to {{rider.route.destination}}</span>
+                </div>
+                <div>
+                    model: <span class="available-riders__model">{{rider.model}}</span> 
+                </div>
+                <div>
+                    seats available: <span class="available-riders__seats">{{rider.seats}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="confirm-rider" ng-if="Commuters.isRiderSelected">
+            <button class="button button--primary" ng-click="Commuters.confirmRide()">Confirm Ride</button>
+        </div>
+    </div>
+    <div ng-if="Commuters.isRiderConfirmed">
+        <div class="ride-details">
+            Ride Details
+            <span class="log-out pull-right" ng-click="RideShare.logOut()">Logout</span>
+            <span class="cancel-ride" ng-click="Commuters.cancelRide()">Cancel Ride</span>
+
+        </div>
+        <div class="selected-rider">
+            <div>Travelling from 
+                <span class="selected-rider__route">{{Commuters.selectedRider.route.source}}</span> to 
+                <span class="selected-rider__route">{{Commuters.selectedRider.route.destination}}</span>
+            </div>
+            <div>
+                <span class="selected-rider__name">{{Commuters.selectedRider.name}}</span>
+                <span class="selected-rider__ratings">{{Commuters.selectedRider.ratings}}</span>
+            </div>
+            <div>
+                <span class="selected-rider__contact">{{Commuters.selectedRider.phone}}</span>
+                <span class="selected-rider__model">{{Commuters.selectedRider.model}}</span> 
+            </div>
+        </div>
+    </div>
+</div>

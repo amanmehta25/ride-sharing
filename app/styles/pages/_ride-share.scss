@@ -1,0 +1,163 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the ride-share page.
+// -----------------------------------------------------------------------------
+.share-ride-container,
+.pick-ride-container {
+    border: 1px solid $color-gray-lightest;
+    margin: 52px auto;
+    max-width: 920px;
+}
+
+.share-ride,
+.pick-ride {
+    border-bottom: 1px solid $color-gray-lightest;
+    font-size: $base-largest-font;
+    font-weight: $dark-font-weight;
+    padding: 16px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.share-ride-form,
+.pick-ride-form {
+    border-bottom: 1px solid $color-gray-lightest;
+    padding: 16px;
+}
+
+.share-ride-form__input,
+.pick-ride-form__input {
+    width: 48%;
+}
+
+.available-riders-container {
+    display: inline-block;
+    padding: 24px 24px 0;
+    width: 100%;
+}
+
+.available-riders {
+    background: $color-white;
+    border: 1px solid $color-gray-lightest;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 16px;
+    text-align: left;
+    width: 48%;
+
+    &--selected {
+        border-color: $color-orange;
+    }
+}
+
+.available-riders:nth-child(odd) {
+    float: left;
+}
+
+.available-riders:nth-child(even) {
+    float: right;
+    margin-left: 4%;
+}
+
+.available-riders__name {
+    font-size: $base-large-font;
+    font-weight: $base-font-weight;
+    text-transform: capitalize
+}
+
+.available-riders__ratings {
+    color: #0000ff;
+    float: right;
+}
+
+.available-riders__route,
+.available-riders__model,
+.available-riders__seats {
+    font-weight: $base-font-weight;
+}
+
+.confirm-rider {
+    margin-top: -4px;
+    margin-bottom: 20px;
+}
+
+.ride-details {
+    border-bottom: 1px solid $color-gray-lightest;
+    font-size: $base-largest-font;
+    font-weight: $dark-font-weight;
+    padding: 16px;
+    text-align: left;
+}
+
+.cancel-ride,
+.go-back {
+    color: $color-gray-light;
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-right: 10px;
+    text-decoration: underline;
+
+    &:hover {
+        color: $color-gray-dark;
+        font-weight: $base-font-weight;
+    }
+}
+
+.selected-rider,
+.commuters {
+    padding: 16px;
+    text-align: left;
+}
+
+.selected-rider__route,
+.commuters__route {
+    font-size: $base-medium-font;
+    font-weight: $base-font-weight;
+}
+
+.selected-rider__name {
+    font-size: $base-font;
+    font-weight: $base-font-weight;
+    text-transform: capitalize
+}
+
+.selected-rider__ratings {
+    color: #0000ff;
+    float: right;
+}
+
+.selected-rider__contact {
+    color: #0000ff;
+}
+
+.selected-rider__model {
+    float: right;
+    font-weight: $base-font-weight;
+}
+
+.commuters-details {
+    margin: 12px;
+}
+
+.commuters-details__name,
+.commuters-details__phone {
+    font-size: $base-medium-font;
+    font-weight: $base-font-weight;
+}
+
+.commuters-details__phone {
+    color: #0000ff;
+}
+
+@media only screen and (max-width: 768px) {
+    .share-ride-container,
+    .pick-ride-container {
+        margin: 0 auto;
+    }
+
+    .available-riders {
+        width: 100%;
+    }
+}

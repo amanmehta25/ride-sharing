@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main component.
+// -----------------------------------------------------------------------------
+.main-container {
+    text-align: center;
+    margin: 52px auto;
+    max-width: 540px;
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+}
+
+.main-container__heading {
+    margin: 0;
+}
+
+.input-group--full-width {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-container {
+        margin: 20px auto;
+    }
+
+    .main-container__heading {
+        font-size: 20px;
+    }
+}

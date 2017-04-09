@@ -1,0 +1,40 @@
+<div class="sign-up">
+    <div class="text-left register">
+        <div class="inline register-user" ng-class="{'register-user--active': SignUp.newUser.type == 'owner'}" ng-click="SignUp.newUser.type = 'owner'">Car Owner</div>
+        <div class="inline register-user register-user--left" ng-class="{'register-user--active': SignUp.newUser.type == 'commuter'}" ng-click="SignUp.newUser.type = 'commuter'">Commuter</div>
+    </div>
+
+    <form ng-submit="SignUp.createNewUser()">
+        <md-input-container>
+            <label>Full Name</label>
+            <input type="text" name="username" ng-model="SignUp.newUser.name" placeholder="enter your firstname and lastname" required>
+        </md-input-container>
+        <md-input-container>
+            <label>Email ID</label>
+            <input type="email" name="email" ng-model="SignUp.newUser.email" placeholder="emter your email ID" required>
+        </md-input-container>
+        <md-input-container>
+            <label>Mobile Number</label>
+            <input type="number" name="phone" ng-model="SignUp.newUser.phone" placeholder="enter your 10-digit mobile number" minlength="10" maxlength="10" required>
+        </md-input-container>
+        <md-input-container>
+            <label>Password <span>(min 6 characters)</span></label>
+            <input type="password" name="password" ng-model="SignUp.newUser.password" minlength="6" placeholder="set your password" required>
+        </md-input-container>
+        <md-input-container>
+            <label>Re-enter Password</label>
+            <input type="password" name="repassword" ng-model="SignUp.newUser.repassword" minlength="6" placeholder="re-enter your password" required>
+        </md-input-container>
+        <md-input-container ng-if="SignUp.newUser.type == 'owner'">
+            <label>Car Model</label>
+            <input type="text" name="model" ng-model="SignUp.newUser.model" placeholder="name of the car you have" required>
+        </md-input-container>
+        <div class="position">
+            <button class="button button--primary" type="submit">Sign Up</button>
+        </div>
+    </form>
+    <div class="sign-up__log-in">
+        Already have an account?
+        <a ui-sref="auth.log-in">Log In</a>
+    </div>
+</div>

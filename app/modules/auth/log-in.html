@@ -1,0 +1,20 @@
+<div class="log-in">
+    <div class="log-in__heading">Sign In into Your Account</div>
+    <form ng-submit="LogIn.verifyUser()">
+        <md-input-container>
+            <label>Username</label>
+            <input type="text" name="username" ng-model="LogIn.user.name" placeholder="enter your 10-digit mobile number or email ID" required>
+        </md-input-container>
+        <md-input-container>
+            <label>Password</label>
+            <input type="password" name="password" ng-model="LogIn.user.password" minlength="6" placeholder="enter your password" required>
+        </md-input-container>
+        <div class="position">
+            <button class="button button--primary" type="submit">Log In</button>
+        </div>
+    </form>
+    <div class="log-in__sign-up">
+        Don't have an account?
+        <a ui-sref="auth.sign-up">Register</a>
+    </div>
+</div>

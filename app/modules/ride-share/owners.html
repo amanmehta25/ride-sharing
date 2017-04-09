@@ -1,0 +1,47 @@
+<div class="share-ride-container text-center">
+    <div ng-if="!Owners.isRiding || !Owners.isOnRidingScreen">
+        <div class="share-ride">
+            share a ride
+            <span class="log-out pull-right" ng-click="RideShare.logOut()">Logout</span>
+        </div>
+        <form class="share-ride-form" ng-submit="Owners.saveRoute()">
+            <md-input-container class="share-ride-form__input pull-left">
+                <label>Start From</label>
+                <input type="text" name="source" ng-model="Owners.route.source" placeholder="enter start location" ng-readonly="Owners.route.isSet" required>
+            </md-input-container>
+            <md-input-container class="share-ride-form__input pull-right">
+                <label>Destination</label>
+                <input type="text" name="destination" ng-model="Owners.route.destination" placeholder="enter destination" ng-readonly="Owners.route.isSet" required>
+            </md-input-container>
+            <md-input-container class="share-ride-form__input text-center">
+                <input type="text" name="seats" ng-model="Owners.route.seats" placeholder="enter seats available" ng-readonly="Owners.route.isSet" required>
+            </md-input-container>
+            <div class="position">
+                <button class="button button--secondary" ng-if="!Owners.route.isSet" type="submit">Save Route</button>
+                <button class="button button--secondary" ng-if="Owners.route.isSet" ng-click="Owners.route.isSet = !Owners.route.isSet">Change Route</button>
+                <button class="button button--primary" ng-if="!Owners.isRiding" ng-click="Owners.startRide()">Start Driving</button>
+                <button class="button button--primary" ng-if="Owners.isRiding" ng-click="Owners.isOnRidingScreen = !Owners.isOnRidingScreen">Go to Commuter Details</button>
+            </div>
+        </form>
+    </div>
+    <div ng-if="Owners.isRiding && Owners.isOnRidingScreen">
+        <div class="ride-details">
+            Commuters Details
+            <span class="log-out pull-right" ng-click="RideShare.logOut()">Logout</span> 
+            <span class="go-back pull-right" ng-click="Owners.isOnRidingScreen = !Owners.isOnRidingScreen">Go Back</span>
+        </div>
+        <div class="commuters">
+            <div>Travelling from 
+                <span class="commuters__route">{{Owners.route.source}}</span> to 
+                <span class="commuters__route">{{Owners.route.destination}}</span>
+            </div>
+            <div class="commuters-details" ng-repeat="commuter in Owners.commuters">
+                <div>Passenger {{$index + 1}}</div>
+                <div>
+                    <span class="commuters-details__name">{{commuter.name}}</span>
+                    <span class="commuters-details__phone pull-right">{{commuter.phone}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

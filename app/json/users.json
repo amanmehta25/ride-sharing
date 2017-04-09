@@ -1,0 +1,66 @@
+[
+    {
+        "email": "amumehta2593@gmail.com",
+        "model": "Honda Civic DL12U 1234",
+        "name": "aman mehta",
+        "password": "passme",
+        "phone": "9582677800",
+        "isOwner": true
+    },
+    {
+        "email": "shitij.goyal@gmail.com",
+        "model": "Honda City DL12U 3421",
+        "name": "shitij goyal",
+        "password": "slimboy",
+        "phone": "7878787878",
+        "isOwner": true
+    },
+    {
+        "email": "nimish.singhal@gmail.com",
+        "model": "Maruti Suzuki Swift DL32U 5678",
+        "name": "nimish singhal",
+        "password": "fatboy",
+        "phone": "8787878787",
+        "isOwner": true
+    },
+    {
+        "email": "vj.kumar@gmail.com",
+        "model": "Hyundai i20 DL12U 2341",
+        "name": "vj kumar",
+        "password": "gymboy",
+        "phone": "9898989898",
+        "isOwner": true
+    },
+    {
+        "email": "ayushpoddar@gmail.com",
+        "model": "Honda Accent DL12U 4356",
+        "name": "ayush",
+        "password": "bookskim",
+        "phone": "8989898989",
+        "isOwner": true
+    },
+    {
+        "email": "sheena.chawla@gmail.com",
+        "model": null,
+        "name": "Sheena Chawla",
+        "password": "passme",
+        "phone": "7897897897",
+        "isOwner": false
+    },
+    {
+        "email": "aakash.kumar@gmail.com",
+        "model": null,
+        "name": "Aakash Kumar",
+        "password": "slimboy",
+        "phone": "9879879879",
+        "isOwner": false
+    },
+    {
+        "email": "pappu.yadav@gmail.com",
+        "model": null,
+        "name": "pappu yadav",
+        "password": "fatboy",
+        "phone": "8798798798",
+        "isOwner": false
+    }
+]
